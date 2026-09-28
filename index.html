@@ -1,16 +1,828 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Lakshita Singla — Business Analyst | Banking & Workflow Automation | Data & Analytics | Business Transformation">
-  <title>Lakshita Singla — Business Analyst</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Lakshita Singla — Business Analyst, Banking, Data and Business Transformation.">
+<title>Lakshita Singla — Portfolio</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,500;1,500&display=swap');
+
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#121722;
+  --navy:#132844;
+  --blue:#3d63ff;
+  --paper:#f7f5f0;
+  --warm:#e9e6de;
+  --line:#c9c7c0;
+  --muted:#5f6470;
+  --white:#fff;
+  --sans:"DM Sans",Arial,sans-serif;
+  --serif:"Playfair Display",Georgia,serif;
+  --mono:"DM Mono",monospace;
+}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);color:var(--ink);font-family:var(--sans);
+  font-size:17px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+.top-progress{position:fixed;z-index:999;top:0;left:0;width:0;height:4px;background:var(--blue)}
+.site-nav{
+  height:84px;position:sticky;top:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 6vw;background:rgba(247,245,240,.96);
+  backdrop-filter:blur(15px);border-bottom:1px solid var(--line)
+}
+.logo{font-size:25px;font-weight:700;letter-spacing:-.09em}
+.logo span{color:var(--blue)}
+.nav-center{display:flex;gap:36px;font:500 13px var(--mono);text-transform:uppercase;letter-spacing:.05em}
+.nav-center a{opacity:.7}.nav-center a:hover{opacity:1}
+.nav-button{
+  border:1px solid var(--ink);padding:13px 18px;
+  font:500 12px var(--mono);text-transform:uppercase
+}
+.nav-button span{color:var(--blue);margin-left:12px}
+
+.hero{
+  min-height:calc(100vh - 84px);padding:36px 7vw 32px;
+  display:flex;flex-direction:column;justify-content:space-between;
+  position:relative;overflow:hidden
+}
+.hero:before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    linear-gradient(90deg,transparent 49.9%,rgba(19,40,68,.055) 50%,transparent 50.1%),
+    linear-gradient(0deg,transparent 31.9%,rgba(19,40,68,.045) 32%,transparent 32.1%);
+}
+.hero-top,.hero-bottom{
+  position:relative;z-index:1;display:flex;align-items:center;
+  justify-content:space-between;text-transform:uppercase;
+  font:500 13px var(--mono);letter-spacing:.1em;color:var(--muted)
+}
+.hero-main{
+  position:relative;z-index:1;display:grid;grid-template-columns:1.2fr .8fr;
+  gap:9vw;align-items:end
+}
+.hero .micro{font:600 14px var(--mono);letter-spacing:.1em;color:var(--blue)}
+.hero h1{
+  font-size:clamp(86px,12vw,185px);line-height:.78;
+  letter-spacing:-.085em;font-weight:700;margin-top:26px;
+  color:var(--ink)
+}
+.hero h1 span{color:var(--ink);font-weight:700}
+.hero-rule{height:2px;background:var(--ink);width:78%;margin:42px 0 20px}
+.positioning{font:600 14px var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.hero-side{max-width:560px;padding-bottom:6px}
+.hero-side>p{font-size:28px;line-height:1.32;letter-spacing:-.025em}
+.hero-links{display:flex;gap:30px;margin-top:38px}
+.hero-links a{font:600 12px var(--mono);text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:7px}
+.hero-links a span{margin-left:12px;color:var(--blue)}
+.hero-scroll-line{height:2px;background:var(--line);flex:1;margin:0 22px}
+
+.section{padding:115px 7vw}
+.section-head{
+  display:grid;grid-template-columns:1fr 1fr;gap:10vw;
+  align-items:start;margin-bottom:70px
+}
+.section-head>span{
+  font:600 15px var(--mono);letter-spacing:.1em;color:var(--blue);
+  text-transform:uppercase
+}
+.section-head>p{font-size:17px;color:var(--muted);max-width:560px;line-height:1.65}
+
+.numbers{background:var(--navy);color:var(--white);padding:90px 7vw 100px}
+.numbers .section-head>span{color:#8da6ff}
+.numbers .section-head>p{color:#c1cad8}
+.numbers-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid #40536e}
+.numbers-grid article{min-height:365px;padding:36px 31px;border-right:1px solid #40536e}
+.numbers-grid article:last-child{border-right:0}
+.big-number{font-size:78px;font-weight:600;line-height:.9;letter-spacing:-.075em}
+.big-number span{font-size:37px}
+.number-label{
+  font:600 15px var(--mono);letter-spacing:.08em;color:#b5c0d0;
+  margin-top:13px;text-transform:uppercase
+}
+.numbers-grid h3{font-size:24px;line-height:1.18;margin-top:62px;font-weight:600}
+.numbers-grid p{font-size:15px;color:#c0c9d6;line-height:1.7;margin-top:15px;max-width:270px}
+
+.about-layout{display:grid;grid-template-columns:1fr 1fr;gap:10vw}
+.about-statement .micro,.recognition-title .micro{font:600 15px var(--mono);letter-spacing:.1em;color:var(--blue)}
+.about-statement h2{
+  font-size:clamp(55px,6.4vw,90px);line-height:.94;
+  letter-spacing:-.065em;font-weight:600;margin-top:27px
+}
+.about-statement i,.work-title-row i,.recognition-title i,.closing i{
+  font-family:var(--serif);font-weight:500
+}
+.about-copy{max-width:620px}
+.lead-copy{font-size:29px;line-height:1.36;letter-spacing:-.025em;margin-bottom:30px}
+.about-copy>p:not(.lead-copy){font-size:16px;color:var(--muted);line-height:1.8}
+.capability-list{margin-top:42px;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr}
+.capability-list span{
+  padding:17px 0;border-bottom:1px solid var(--line);
+  font:600 13px var(--mono);text-transform:uppercase
+}
+
+.experience{background:var(--warm)}
+.experience-card{
+  display:grid;grid-template-columns:40% 60%;
+  border-top:1px solid var(--line);padding:70px 0
+}
+.experience-card:last-child{border-bottom:1px solid var(--line)}
+.exp-left{padding-right:7vw}
+.exp-left .micro{font:600 15px var(--mono);letter-spacing:.08em;color:var(--blue)}
+.exp-left h2{
+  font-size:clamp(64px,7vw,105px);line-height:.82;
+  letter-spacing:-.075em;font-weight:600;margin:27px 0 21px
+}
+.exp-left h2 i{font-family:var(--serif);font-weight:500}
+.company-type{font:600 15px var(--mono);letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+.impact-pill{
+  display:flex;align-items:baseline;gap:11px;margin-top:52px;
+  border-left:4px solid var(--blue);padding:10px 0 10px 16px
+}
+.impact-pill b{font-size:40px;line-height:1}
+.impact-pill span{font:600 13px var(--mono);color:var(--muted)}
+.domain-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:43px}
+.domain-tags span{
+  border:1px solid #b8b6af;padding:9px 11px;
+  font:600 11px var(--mono);text-transform:uppercase;color:var(--muted)
+}
+.exp-heading{
+  font:700 15px var(--mono);letter-spacing:.08em;
+  color:var(--blue);margin-bottom:23px
+}
+.exp-right ul{padding-left:23px}
+.exp-right li{font-size:17px;line-height:1.78;margin-bottom:12px}
+.initiative{border-top:1px solid var(--line);margin-top:34px;padding-top:23px}
+.initiative>div{font:700 15px var(--mono);letter-spacing:.08em;color:var(--ink);margin-bottom:15px}
+.initiative li{font-size:16px}
+
+.education-grid{border-top:1px solid var(--line)}
+.edu-card{
+  display:grid;grid-template-columns:130px 1fr 140px;
+  align-items:center;gap:38px;padding:35px 0;border-bottom:1px solid var(--line)
+}
+.edu-card .edu-year{font:600 15px var(--mono);color:var(--muted)}
+.edu-main>p{font:700 14px var(--mono);color:var(--blue);text-transform:uppercase;letter-spacing:.08em}
+.edu-main h2{font-size:39px;font-weight:600;letter-spacing:-.04em;margin:5px 0}
+.edu-main span{font-size:15px;color:var(--muted)}
+.edu-card>strong{font-size:31px;text-align:right;font-weight:600}
+.featured-edu{
+  background:var(--navy);color:white;padding-left:28px;padding-right:28px;
+  margin-left:-28px;margin-right:-28px
+}
+.featured-edu .edu-year,.featured-edu .edu-main span{color:#c1cad8}
+.featured-edu .edu-main>p{color:#91a9ff}
+
+.certifications{background:var(--warm)}
+.cert-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line)}
+.cert-grid article{min-height:380px;padding:33px;border-right:1px solid var(--line)}
+.cert-grid article:last-child{border-right:0}
+.cert-grid article>span{font:600 15px var(--mono);color:var(--blue)}
+.cert-year{font:600 15px var(--mono);color:var(--muted);margin-top:8px}
+.cert-grid h3{font-size:37px;line-height:1.02;letter-spacing:-.045em;font-weight:600;margin-top:65px}
+.cert-grid b{
+  display:block;font:700 13px var(--mono);letter-spacing:.06em;
+  text-transform:uppercase;color:var(--navy);margin-top:16px
+}
+.cert-grid article>p:last-child{font-size:15px;color:var(--muted);line-height:1.65;margin-top:16px}
+
+.work{background:#dfe3e9}
+.work-title-row{display:grid;grid-template-columns:1fr 1fr;gap:10vw;align-items:end;margin-bottom:65px}
+.work-title-row h2{font-size:clamp(62px,7vw,106px);line-height:.86;letter-spacing:-.07em;font-weight:600}
+.work-intro{font-size:17px;line-height:1.7;color:#535964;max-width:540px}
+.project-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.project{
+  min-height:650px;background:var(--paper);padding:35px;
+  position:relative;overflow:hidden;display:flex;flex-direction:column;
+  border:1px solid rgba(19,40,68,.08)
+}
+.project-dark{background:var(--navy);color:white}
+.project-index,.project-meta{font:600 13px var(--mono);letter-spacing:.08em;color:var(--muted)}
+.project-dark .project-index,.project-dark .project-meta{color:#bdc7d6}
+.project-meta{margin-top:20px}
+.project h3{
+  font-size:clamp(52px,5.4vw,80px);line-height:.88;
+  letter-spacing:-.065em;font-weight:600;margin-top:42px;position:relative;z-index:2
+}
+.project h4{font:500 26px var(--serif);margin-top:10px;position:relative;z-index:2}
+.project-body{max-width:560px;margin-top:auto;position:relative;z-index:2}
+.project-body b{font:700 13px var(--mono);letter-spacing:.09em;color:var(--blue)}
+.project-body p{font-size:15px;line-height:1.72;color:var(--muted);margin-top:9px}
+.project-dark .project-body p{color:#c2cad7}
+.project-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:22px;position:relative;z-index:2}
+.project-tags span{border:1px solid var(--line);padding:8px 10px;font:600 10px var(--mono);letter-spacing:.08em}
+.project-dark .project-tags span{border-color:#536780}
+.project-graphic{position:absolute;font-weight:700;line-height:.8;opacity:.06;right:-10px;bottom:-20px;pointer-events:none}
+.graphic-w{font-size:310px;font-family:var(--serif)}
+.graphic-02,.graphic-03{font-size:230px}.graphic-04,.graphic-05{font-size:300px}.graphic-06{font-size:270px}
+
+.recognition-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:10vw}
+.recognition-title h2{font-size:clamp(62px,7vw,100px);line-height:.9;letter-spacing:-.065em;font-weight:600;margin-top:27px}
+.award-list{border-top:1px solid var(--line)}
+.award-list article{display:grid;grid-template-columns:48px 1fr;gap:20px;padding:30px 0;border-bottom:1px solid var(--line)}
+.award-list article>span{font:600 14px var(--mono);color:var(--blue)}
+.award-list b{font:700 16px var(--mono);letter-spacing:.06em}
+.award-list p{font-size:15px;color:var(--muted);margin-top:8px;line-height:1.65}
+
+.lead-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.lead-grid article{
+  background:var(--paper);padding:38px;min-height:430px;
+  border-top:4px solid var(--navy)
+}
+.lead-top{display:flex;justify-content:space-between}
+.lead-top span,.lead-top p{font:600 14px var(--mono)}
+.lead-top span{color:var(--blue)}.lead-top p{color:var(--muted)}
+.lead-grid h2{font-size:78px;letter-spacing:-.065em;font-weight:600;margin-top:75px}
+.lead-grid h4{font-size:16px;font-weight:600;color:var(--muted)}
+.lead-grid article>p:last-child{font-size:16px;line-height:1.75;max-width:530px;margin-top:46px}
+.beyond-grid{display:grid;grid-template-columns:repeat(4,1fr);background:var(--navy);color:white;margin-top:20px}
+.beyond-grid>div{padding:28px 22px;border-right:1px solid #41546d}
+.beyond-grid span{font:600 11px var(--mono);letter-spacing:.1em;color:#9fb0c6}
+.beyond-grid b{display:block;font-size:19px;font-weight:600;margin-top:16px}
+.beyond-grid p{font-size:13px;color:#c0cad7;margin-top:5px}
+
+.closing{text-align:center;padding:155px 7vw;background:var(--paper)}
+.closing-line{width:90px;height:4px;background:var(--blue);margin:0 auto 33px}
+.closing .micro{font-size:14px}
+.closing h2{font-size:clamp(62px,7vw,108px);line-height:.87;letter-spacing:-.07em;font-weight:600;margin-top:27px}
+.closing-copy{max-width:610px;margin:38px auto 0;color:var(--muted);font-size:17px}
+
+.contact{background:var(--navy);color:white;padding:32px 6vw 24px}
+.contact-inner{border:1px solid #3d516c;padding:32px 34px 22px}
+.contact-head,.contact-footer{display:flex;justify-content:space-between;font:600 11px var(--mono);letter-spacing:.1em;color:#aeb9c8}
+.contact-main{display:grid;grid-template-columns:1fr 1fr;gap:10vw;padding:115px 0 125px}
+.contact h2{font-size:clamp(62px,7vw,108px);line-height:.86;letter-spacing:-.07em;font-weight:600;margin-top:25px}
+.contact-actions{border-top:1px solid #40536d;align-self:end}
+.contact-actions a{display:grid;grid-template-columns:90px 1fr 30px;gap:18px;align-items:center;padding:23px 0;border-bottom:1px solid #40536d}
+.contact-actions span{font:600 12px var(--mono);color:#9fb0c6}
+.contact-actions b{font-size:16px;font-weight:500}
+.contact-actions i{font-style:normal;color:#91a9ff;text-align:right}
+.contact-footer{border-top:1px solid #40536d;padding-top:18px}
+
+@media(max-width:900px){
+  .nav-center{display:none}
+  .section{padding:85px 6vw}
+  .hero{padding-left:6vw;padding-right:6vw}
+  .hero-main,.about-layout,.section-head,.experience-card,.work-title-row,.recognition-layout,.contact-main{grid-template-columns:1fr;gap:45px}
+  .hero h1{font-size:20vw}
+  .hero-side{max-width:650px}
+  .numbers-grid{grid-template-columns:1fr 1fr}
+  .numbers-grid article:nth-child(2){border-right:0}
+  .cert-grid{grid-template-columns:1fr 1fr}
+  .cert-grid article:nth-child(2){border-right:0}
+  .project-grid{grid-template-columns:1fr}
+  .lead-grid{grid-template-columns:1fr}
+  .beyond-grid{grid-template-columns:1fr 1fr}
+  .edu-card{grid-template-columns:110px 1fr 100px}
+}
+@media(max-width:560px){
+  body{font-size:16px}
+  .site-nav{height:72px;padding:0 5vw}
+  .nav-button{font-size:10px;padding:10px}
+  .hero{min-height:760px}
+  .hero-top span:last-child{display:none}
+  .hero h1{font-size:22vw}
+  .hero-side>p{font-size:22px}
+  .hero-bottom span:first-child{font-size:10px}
+  .numbers-grid,.cert-grid,.beyond-grid{grid-template-columns:1fr}
+  .numbers-grid article,.cert-grid article,.beyond-grid>div{border-right:0;border-bottom:1px solid rgba(19,40,68,.14)}
+  .edu-card{grid-template-columns:1fr;gap:10px}
+  .edu-card>strong{text-align:left}
+  .featured-edu{margin:0;padding-left:20px;padding-right:20px}
+  .project{min-height:580px}
+  .contact-main{padding:85px 0}
+  .contact-actions a{grid-template-columns:70px 1fr 20px}
+  .contact-inner{padding:25px 20px 18px}
+  .contact-footer{gap:15px;flex-wrap:wrap}
+}
+</style>
+
+<style id="readability-final">
+/* RECRUITER-SCAN TYPOGRAPHY: no important information below 16px */
+.section-head>span{
+  font-size:18px !important;
+  font-weight:700 !important;
+  letter-spacing:.09em !important;
+}
+.section-head>p{
+  font-size:18px !important;
+  line-height:1.6 !important;
+}
+.hero-top,.hero-bottom{
+  font-size:14px !important;
+}
+.hero .micro{
+  font-size:16px !important;
+}
+.positioning{
+  font-size:15px !important;
+}
+
+/* IMPACT */
+.number-label{
+  font-size:17px !important;
+  font-weight:700 !important;
+}
+.numbers-grid h3{
+  font-size:26px !important;
+}
+.numbers-grid p{
+  font-size:16px !important;
+}
+
+/* EXPERIENCE */
+.exp-left .micro{
+  font-size:17px !important;
+  font-weight:700 !important;
+}
+.company-type{
+  font-size:17px !important;
+  font-weight:700 !important;
+}
+.exp-heading{
+  font-size:17px !important;
+  font-weight:700 !important;
+}
+.exp-right li{
+  font-size:18px !important;
+  line-height:1.72 !important;
+}
+.impact-pill span{
+  font-size:15px !important;
+  font-weight:700 !important;
+}
+.domain-tags span{
+  font-size:13px !important;
+  font-weight:700 !important;
+}
+.initiative>div{
+  font-size:17px !important;
+}
+.initiative li{
+  font-size:17px !important;
+}
+
+/* EDUCATION */
+.edu-card .edu-year{
+  font-size:17px !important;
+  font-weight:700 !important;
+}
+.edu-main>p{
+  font-size:16px !important;
+  font-weight:700 !important;
+}
+.edu-main h2{
+  font-size:42px !important;
+}
+.edu-main span{
+  font-size:17px !important;
+}
+.edu-card>strong{
+  font-size:34px !important;
+}
+
+/* CERTIFICATIONS */
+.cert-grid article>span,
+.cert-year{
+  font-size:17px !important;
+  font-weight:700 !important;
+}
+.cert-grid h3{
+  font-size:40px !important;
+}
+.cert-grid b{
+  font-size:16px !important;
+  font-weight:700 !important;
+}
+.cert-grid article>p:last-child{
+  font-size:16px !important;
+}
+
+/* PROJECTS */
+.project-index,.project-meta{
+  font-size:15px !important;
+  font-weight:700 !important;
+}
+.project h4{
+  font-size:28px !important;
+}
+.project-body b{
+  font-size:15px !important;
+}
+.project-body p{
+  font-size:16px !important;
+}
+.project-tags span{
+  font-size:12px !important;
+  font-weight:700 !important;
+}
+
+/* RECOGNITION */
+.award-list article>span{
+  font-size:15px !important;
+}
+.award-list b{
+  font-size:18px !important;
+}
+.award-list p{
+  font-size:16px !important;
+}
+
+/* LEADERSHIP */
+.lead-top span,.lead-top p{
+  font-size:15px !important;
+  font-weight:700 !important;
+}
+.lead-grid h4{
+  font-size:17px !important;
+}
+.lead-grid article>p:last-child{
+  font-size:17px !important;
+}
+.beyond-grid span{
+  font-size:13px !important;
+}
+.beyond-grid b{
+  font-size:20px !important;
+}
+.beyond-grid p{
+  font-size:15px !important;
+}
+
+/* CONTACT */
+.contact-head,.contact-footer{
+  font-size:13px !important;
+}
+.contact-actions span{
+  font-size:13px !important;
+}
+.contact-actions b{
+  font-size:17px !important;
+}
+
+/* Don't let important labels collapse on narrow screens. */
+@media(max-width:900px){
+  .section-head>span{font-size:16px !important}
+  .section-head>p{font-size:17px !important}
+  .exp-left .micro,.company-type{font-size:16px !important}
+  .edu-main h2{font-size:36px !important}
+  .cert-grid h3{font-size:36px !important}
+}
+@media(max-width:560px){
+  .section-head>span{font-size:15px !important}
+  .section-head>p{font-size:16px !important}
+  .exp-left .micro,.company-type{font-size:15px !important}
+  .edu-card .edu-year{font-size:15px !important}
+  .cert-grid h3{font-size:34px !important}
+}
+</style>
+
+
+<style id="final-no-tiny-text">
+/* FINAL PASS: important content is deliberately large even inside narrow previews. */
+.section-head>span,
+.exp-left .micro,
+.company-type,
+.exp-heading,
+.initiative>div,
+.edu-card .edu-year,
+.edu-main>p,
+.cert-grid article>span,
+.cert-year,
+.cert-grid b,
+.project-index,
+.project-meta,
+.project-body b,
+.award-list article>span,
+.award-list b,
+.lead-top span,
+.lead-top p,
+.beyond-grid span,
+.contact-head,
+.contact-footer,
+.contact-actions span{
+  font-size:20px !important;
+  line-height:1.25 !important;
+  font-weight:700 !important;
+}
+
+.section-head>p,
+.numbers-grid p,
+.about-copy>p:not(.lead-copy),
+.exp-right li,
+.initiative li,
+.edu-main span,
+.cert-grid article>p:last-child,
+.project-body p,
+.award-list p,
+.lead-grid article>p:last-child,
+.beyond-grid p{
+  font-size:18px !important;
+  line-height:1.65 !important;
+}
+
+.number-label{
+  font-size:20px !important;
+  font-weight:700 !important;
+}
+.numbers-grid h3{
+  font-size:29px !important;
+}
+.big-number{
+  font-size:84px !important;
+}
+.big-number span{
+  font-size:40px !important;
+}
+
+.exp-left h2{
+  font-size:clamp(72px,9vw,118px) !important;
+}
+.impact-pill b{
+  font-size:44px !important;
+}
+.impact-pill span{
+  font-size:18px !important;
+}
+.domain-tags span,
+.project-tags span{
+  font-size:14px !important;
+}
+.edu-main h2{
+  font-size:44px !important;
+}
+.edu-card>strong{
+  font-size:36px !important;
+}
+.cert-grid h3{
+  font-size:43px !important;
+}
+.project h3{
+  font-size:clamp(56px,6vw,88px) !important;
+}
+.project h4{
+  font-size:30px !important;
+}
+.award-list b{
+  font-size:20px !important;
+}
+.lead-grid h2{
+  font-size:82px !important;
+}
+.lead-grid h4{
+  font-size:19px !important;
+}
+.beyond-grid b{
+  font-size:22px !important;
+}
+.contact-actions b{
+  font-size:19px !important;
+}
+
+@media(max-width:900px){
+  .section-head>span,
+  .exp-left .micro,
+  .company-type,
+  .exp-heading,
+  .initiative>div,
+  .edu-card .edu-year,
+  .edu-main>p,
+  .cert-grid article>span,
+  .cert-year,
+  .cert-grid b,
+  .project-index,
+  .project-meta,
+  .project-body b,
+  .award-list article>span,
+  .award-list b,
+  .lead-top span,
+  .lead-top p,
+  .beyond-grid span,
+  .contact-head,
+  .contact-footer,
+  .contact-actions span{
+    font-size:18px !important;
+  }
+  .section-head>p,
+  .numbers-grid p,
+  .about-copy>p:not(.lead-copy),
+  .exp-right li,
+  .initiative li,
+  .edu-main span,
+  .cert-grid article>p:last-child,
+  .project-body p,
+  .award-list p,
+  .lead-grid article>p:last-child,
+  .beyond-grid p{
+    font-size:17px !important;
+  }
+}
+@media(max-width:560px){
+  .section-head>span,
+  .exp-left .micro,
+  .company-type,
+  .exp-heading,
+  .initiative>div,
+  .edu-card .edu-year,
+  .edu-main>p,
+  .cert-grid article>span,
+  .cert-year,
+  .cert-grid b,
+  .project-index,
+  .project-meta,
+  .project-body b,
+  .award-list article>span,
+  .award-list b,
+  .lead-top span,
+  .lead-top p,
+  .beyond-grid span,
+  .contact-head,
+  .contact-footer,
+  .contact-actions span{
+    font-size:17px !important;
+  }
+  .section-head>p,
+  .numbers-grid p,
+  .about-copy>p:not(.lead-copy),
+  .exp-right li,
+  .initiative li,
+  .edu-main span,
+  .cert-grid article>p:last-child,
+  .project-body p,
+  .award-list p,
+  .lead-grid article>p:last-child,
+  .beyond-grid p{
+    font-size:16px !important;
+  }
+  .number-label{font-size:17px !important}
+  .numbers-grid h3{font-size:25px !important}
+  .exp-left h2{font-size:64px !important}
+  .cert-grid h3{font-size:37px !important}
+  .lead-grid h2{font-size:62px !important}
+}
+</style>
+
+
+<style id="hero-final-hierarchy">
+/* HERO: one identity, one role. No duplicated tiny labels. */
+.hero{
+  padding-top:70px !important;
+}
+.hero-main{
+  align-items:center !important;
+}
+.hero-kicker{
+  display:none !important;
+}
+.hero-name h1{
+  font-size:clamp(92px,13vw,190px) !important;
+  line-height:.80 !important;
+  letter-spacing:-.085em !important;
+  font-weight:700 !important;
+  color:#121722 !important;
+}
+.hero-rule{
+  width:100% !important;
+  height:2px !important;
+  margin:36px 0 18px !important;
+}
+.hero-role{
+  display:block !important;
+  font-family:var(--sans) !important;
+  font-size:clamp(24px,2.4vw,38px) !important;
+  line-height:1.1 !important;
+  font-weight:700 !important;
+  letter-spacing:-.035em !important;
+  color:#3d63ff !important;
+  text-transform:uppercase !important;
+}
+.hero-side>p{
+  font-size:30px !important;
+  line-height:1.32 !important;
+  max-width:540px !important;
+}
+.hero-side{
+  padding-top:60px !important;
+}
+.hero-links a{
+  font-size:13px !important;
+}
+.hero-top{
+  display:none !important;
+}
+.hero-bottom{
+  margin-top:55px !important;
+}
+.hero-bottom span:first-child{
+  font-size:12px !important;
+}
+.hero-bottom span:last-child{
+  font-size:15px !important;
+}
+
+/* Important identity/role/company information throughout the site */
+.exp-left h2,
+.edu-main h2,
+.lead-grid h2{
+  color:#121722 !important;
+}
+.company-type,
+.exp-left .micro,
+.exp-heading,
+.initiative>div,
+.edu-main>p,
+.edu-card .edu-year,
+.cert-grid b,
+.cert-year,
+.project-meta,
+.project-body b,
+.award-list b,
+.lead-top p{
+  color:#121722 !important;
+}
+
+/* Certifications: issuer names are important, not footnotes. */
+.cert-grid b{
+  font-size:18px !important;
+  line-height:1.3 !important;
+  display:block !important;
+}
+.cert-grid h3{
+  font-size:42px !important;
+}
+.cert-year{
+  font-size:17px !important;
+}
+
+/* Company names and role are visually primary */
+.company-type{
+  font-size:18px !important;
+  font-weight:700 !important;
+}
+.exp-left .micro{
+  font-size:18px !important;
+}
+.exp-heading{
+  font-size:18px !important;
+}
+
+/* Recognition titles */
+.award-list b{
+  font-size:20px !important;
+}
+
+/* Section labels should be visible, but not compete with content */
+.section-head>span{
+  font-size:17px !important;
+}
+
+/* Remove the decorative tiny metadata feeling from the hero footer */
+.hero-bottom{
+  color:#5f6470 !important;
+}
+
+@media(max-width:900px){
+  .hero{
+    padding-top:55px !important;
+  }
+  .hero-main{
+    gap:55px !important;
+  }
+  .hero-name h1{
+    font-size:20vw !important;
+  }
+  .hero-side{
+    padding-top:0 !important;
+  }
+  .hero-side>p{
+    font-size:25px !important;
+  }
+}
+@media(max-width:560px){
+  .hero{
+    min-height:700px !important;
+    padding-top:42px !important;
+  }
+  .hero-name h1{
+    font-size:22vw !important;
+  }
+  .hero-role{
+    font-size:25px !important;
+  }
+  .hero-side>p{
+    font-size:21px !important;
+  }
+}
+</style>
+
 </head>
 <body>
+
   <div class="top-progress"></div>
 
   <header class="site-nav">
@@ -27,44 +839,39 @@
   <main id="top">
     <!-- HERO -->
     <section class="hero">
-      <div class="hero-grid-bg"></div>
-      <div class="hero-top">
-        <span>PORTFOLIO / 2026</span>
-        <span>BUSINESS · TECHNOLOGY · DATA</span>
-      </div>
+  <div class="hero-grid-bg"></div>
 
-      <div class="hero-main">
-        <div class="hero-name">
-          <p class="micro">BUSINESS ANALYST</p>
-          <h1>LAKSHITA<br><span>SINGLA</span></h1>
-          <div class="hero-rule"></div>
-          <p class="positioning">Banking & Workflow Automation<br>Data & Analytics · Business Transformation</p>
-        </div>
+  <div class="hero-main">
+    <div class="hero-name">
+      <p class="hero-kicker">BUSINESS ANALYST</p>
+      <h1>LAKSHITA<br>SINGLA</h1>
+      <div class="hero-rule"></div>
+      <p class="hero-role">BUSINESS ANALYST</p>
+    </div>
 
-        <div class="hero-side">
-          <div class="hero-side-number">01</div>
-          <p>
-            I bridge business requirements, technology and data to turn
-            complex processes into practical, scalable solutions.
-          </p>
-          <div class="hero-links">
-            <a href="#work">Explore selected work <span>↓</span></a>
-            <a href="#contact">Get in touch <span>↗</span></a>
-          </div>
-        </div>
+    <div class="hero-side">
+      <p>
+        I bridge business requirements, technology and data to turn
+        complex processes into practical, scalable solutions.
+      </p>
+      <div class="hero-links">
+        <a href="#work">Explore selected work <span>↓</span></a>
+        <a href="#contact">Get in touch <span>↗</span></a>
       </div>
+    </div>
+  </div>
 
-      <div class="hero-bottom">
-        <span>SCROLL TO EXPLORE</span>
-        <span class="hero-scroll-line"></span>
-        <span>SCROLL ↓</span>
-      </div>
-    </section>
+  <div class="hero-bottom">
+    <span>SELECTED PROFILE</span>
+    <span class="hero-scroll-line"></span>
+    <span>↓</span>
+  </div>
+</section>
 
     <!-- NUMBERS -->
     <section class="numbers">
       <div class="section-head dark-head">
-        <span>01 / IMPACT</span>
+        <span>IMPACT</span>
         <p>Selected numbers from my professional and campus experience.</p>
       </div>
       <div class="numbers-grid">
@@ -98,7 +905,7 @@
     <!-- ABOUT -->
     <section class="about section">
       <div class="section-head">
-        <span>02 / PROFILE</span>
+        <span>PROFILE</span>
         <p>A technical foundation shaped by management education and business problem solving.</p>
       </div>
       <div class="about-layout">
@@ -124,12 +931,12 @@
     <!-- EXPERIENCE -->
     <section id="experience" class="experience section">
       <div class="section-head">
-        <span>03 / EXPERIENCE</span>
+        <span>EXPERIENCE</span>
         <p>35 months of professional experience across enterprise software and climate-tech.</p>
       </div>
 
       <article class="experience-card current">
-        <div class="exp-number">01</div>
+        
         <div class="exp-left">
           <p class="micro">APR 2026 — JUN 2026 · 02 MONTHS</p>
           <h2>Clairgies<br><i>Tech</i></h2>
@@ -148,7 +955,7 @@
       </article>
 
       <article class="experience-card">
-        <div class="exp-number">02</div>
+        
         <div class="exp-left">
           <p class="micro">JUL 2022 — JUN 2025 · 35 MONTHS</p>
           <h2>Newgen<br><i>Software</i></h2>
@@ -180,7 +987,7 @@
     <!-- EDUCATION -->
     <section id="education" class="education section">
       <div class="section-head">
-        <span>04 / EDUCATION</span>
+        <span>EDUCATION</span>
         <p>Academic foundation across management, computer science and core schooling.</p>
       </div>
       <div class="education-grid">
@@ -214,7 +1021,7 @@
     <!-- CERTIFICATIONS -->
     <section class="certifications section">
       <div class="section-head">
-        <span>05 / CERTIFICATIONS</span>
+        <span>CERTIFICATIONS</span>
         <p>Selected credentials supporting analytics, process improvement, product and commercial skills.</p>
       </div>
       <div class="cert-grid">
@@ -228,7 +1035,7 @@
     <!-- WORK -->
     <section id="work" class="work section">
       <div class="section-head">
-        <span>06 / SELECTED WORK</span>
+        <span>SELECTED WORK</span>
         <p>Six projects across market strategy, product, analytics, AI data and talent acquisition.</p>
       </div>
       <div class="work-title-row">
@@ -298,7 +1105,7 @@
     <!-- RECOGNITION -->
     <section class="recognition section">
       <div class="section-head">
-        <span>07 / RECOGNITION</span>
+        <span>RECOGNITION</span>
         <p>Recognition received during my professional experience at Newgen Software.</p>
       </div>
       <div class="recognition-layout">
@@ -318,7 +1125,7 @@
     <!-- LEADERSHIP -->
     <section id="leadership" class="leadership section">
       <div class="section-head">
-        <span>08 / LEADERSHIP</span>
+        <span>LEADERSHIP</span>
         <p>Roles beyond the classroom, combining communication, analytics and design.</p>
       </div>
       <div class="lead-grid">
@@ -355,7 +1162,7 @@
     <section id="contact" class="contact">
       <div class="contact-inner">
         <div class="contact-head">
-          <span>09 / CONTACT</span>
+          <span>CONTACT</span>
           <span>LAKSHITA SINGLA · 2026</span>
         </div>
         <div class="contact-main">
@@ -376,6 +1183,14 @@
       </div>
     </section>
   </main>
-  <script src="script.js"></script>
+  
+
+<script>
+const bar=document.querySelector('.top-progress');
+window.addEventListener('scroll',()=>{
+  const max=document.documentElement.scrollHeight-window.innerHeight;
+  bar.style.width=max>0?`${(window.scrollY/max)*100}%`:'0%';
+},{passive:true});
+</script>
 </body>
 </html>

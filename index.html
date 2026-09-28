@@ -576,6 +576,192 @@ a{color:inherit;text-decoration:none}
   .project{min-height:480px !important}
 }
 </style>
+<style id="final-spacing-fix">
+/* FINAL SPACING + CONSISTENCY PASS */
+.section{
+  padding-top:58px !important;
+  padding-bottom:58px !important;
+}
+.section-head{
+  margin-bottom:32px !important;
+}
+
+/* EDUCATION — all entries use the same light treatment */
+.education{
+  background:var(--paper) !important;
+  padding-top:58px !important;
+  padding-bottom:58px !important;
+}
+.education-grid{border-top:1px solid var(--line) !important}
+.edu-card,
+.edu-card.featured-edu{
+  background:transparent !important;
+  color:var(--ink) !important;
+  margin:0 !important;
+  padding:20px 0 !important;
+  min-height:0 !important;
+}
+.edu-card .edu-year,
+.featured-edu .edu-year{
+  color:var(--muted) !important;
+}
+.edu-main>p,
+.featured-edu .edu-main>p{
+  color:var(--blue) !important;
+}
+.edu-main h2{
+  color:var(--ink) !important;
+}
+.edu-main span,
+.featured-edu .edu-main span{
+  color:var(--muted) !important;
+}
+.edu-card>strong{
+  color:var(--ink) !important;
+}
+
+/* PROJECTS — WARMEE and all other projects share the same light card */
+.work{
+  padding-top:58px !important;
+  padding-bottom:58px !important;
+}
+.project,
+.project.project-dark{
+  background:var(--paper) !important;
+  color:var(--ink) !important;
+  min-height:470px !important;
+  padding:26px !important;
+}
+.project-dark .project-index,
+.project-dark .project-meta{
+  color:var(--muted) !important;
+}
+.project-dark .project-body p{
+  color:var(--muted) !important;
+}
+.project-dark .project-body b{
+  color:var(--blue) !important;
+}
+.project-dark .project-tags span{
+  border-color:var(--line) !important;
+  color:var(--ink) !important;
+}
+
+/* Reduce the large vertical gaps inside project cards */
+.project h3{
+  margin-top:22px !important;
+}
+.project-body{
+  margin-top:28px !important;
+}
+.project-tags{
+  margin-top:13px !important;
+}
+
+/* Recognition / leadership / closing compactness */
+.recognition{
+  padding-top:52px !important;
+  padding-bottom:52px !important;
+}
+.recognition-title h2{
+  margin-top:14px !important;
+}
+.leadership{
+  padding-top:58px !important;
+  padding-bottom:58px !important;
+}
+.lead-grid article{
+  min-height:285px !important;
+}
+.lead-grid h2{
+  margin-top:34px !important;
+}
+.lead-grid article>p:last-child{
+  margin-top:22px !important;
+}
+.beyond-grid{
+  margin-top:12px !important;
+}
+.beyond-grid>div{
+  padding:17px 18px !important;
+}
+.closing{
+  padding:78px 7vw !important;
+}
+.closing h2{
+  margin-top:18px !important;
+}
+.closing-copy{
+  margin-top:24px !important;
+}
+
+/* Contact — remove the giant empty top area */
+.contact{
+  padding-top:20px !important;
+}
+.contact-inner{
+  padding-top:25px !important;
+}
+.contact-main{
+  padding:55px 0 65px !important;
+}
+.contact h2{
+  margin-top:15px !important;
+}
+
+/* Certifications tighter */
+.certifications{
+  padding-top:58px !important;
+  padding-bottom:58px !important;
+}
+.cert-grid article{
+  min-height:285px !important;
+  padding:23px !important;
+}
+.cert-grid h3{
+  margin-top:32px !important;
+}
+
+/* Experience tighter */
+.experience{
+  padding-top:58px !important;
+  padding-bottom:58px !important;
+}
+.experience-card{
+  padding:34px 0 !important;
+}
+.initiative{
+  margin-top:16px !important;
+  padding-top:13px !important;
+}
+
+/* Numbers tighter */
+.numbers{
+  padding-top:62px !important;
+  padding-bottom:64px !important;
+}
+.numbers-grid article{
+  min-height:270px !important;
+  padding:26px !important;
+}
+.numbers-grid h3{
+  margin-top:32px !important;
+}
+
+/* Mobile */
+@media(max-width:900px){
+  .section{padding-top:48px !important;padding-bottom:48px !important}
+  .experience-card{gap:25px !important}
+  .project{min-height:440px !important}
+  .contact-main{padding:45px 0 55px !important}
+}
+@media(max-width:560px){
+  .section{padding-top:42px !important;padding-bottom:42px !important}
+  .numbers{padding-top:48px !important;padding-bottom:50px !important}
+  .project{min-height:410px !important}
+  .closing{padding:58px 6vw !important}
+}
+</style>
 </head>
 <body>
 
@@ -763,7 +949,7 @@ a{color:inherit;text-decoration:none}
         <p>Academic foundation across management, computer science and core schooling.</p>
       </div>
       <div class="education-grid">
-        <article class="edu-card featured-edu">
+        <article class="edu-card">
           <span class="edu-year">2025 — 2027</span>
           <div class="edu-main">
             <p>MBA</p>

@@ -33,3 +33,14 @@ h1 em,h2 em{font-family:var(--serif);font-weight:500}
 .contact{background:var(--ink);color:var(--paper);padding-bottom:30px}.contact .section-label{color:#9b9b96}.contact-top{display:flex;justify-content:space-between;align-items:center}.contact-top>span{color:#858680}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:10vw;padding:120px 0}.contact h2{font-size:clamp(55px,7vw,105px);line-height:.9;letter-spacing:-.065em;font-weight:500}.contact-links{border-top:1px solid #454642;align-self:end}.contact-links a{display:flex;justify-content:space-between;padding:21px 0;border-bottom:1px solid #454642;font:500 12px var(--mono);text-transform:uppercase}.contact-links a:hover{padding-left:8px}.contact footer{border-top:1px solid #454642;padding-top:20px;display:flex;justify-content:space-between;color:#858680;font:500 9px var(--mono);letter-spacing:.08em}
 @media(max-width:850px){.nav{padding:0 5vw}.nav nav{display:none}.section{padding:80px 6vw}.hero{padding-top:75px}.hero-grid,.about-grid,.timeline-main,.work-intro,.recognition-grid,.leadership-grid,.contact-grid{grid-template-columns:1fr;gap:45px}.hero h1{font-size:22vw}.hero-copy{max-width:none}.metrics-grid{grid-template-columns:1fr 1fr}.metric{padding:20px}.metric strong{font-size:40px}.timeline-main{gap:25px}.project{grid-template-columns:45px 1fr}.project-top{flex-direction:column;gap:8px}.education-strip{grid-template-columns:1fr 1fr}.contact-grid{padding:80px 0}.contact footer{gap:15px;flex-wrap:wrap}.hero-bottom{margin-top:70px}}
 @media(max-width:520px){.metrics-grid{grid-template-columns:1fr}.education-strip{grid-template-columns:1fr}.hero-actions{flex-direction:column;align-items:flex-start}.button{width:100%;justify-content:space-between}.contact h2{font-size:18vw}}
+
+
+/* Safe reveal animation: content remains visible even before JS/scroll triggers. */
+.reveal-ready {
+  animation: portfolioReveal .65s ease both;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+@keyframes portfolioReveal {
+  from { opacity: .35; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
